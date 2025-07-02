@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Private Car - Policy Type</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Private Car – Choose Policy Type</h2>
+
+<div class="form-container">
+  <form id="policyForm">
+    <label for="policyType">Choose Policy Type *</label>
+    <select id="policyType" onchange="showPolicyForm()">
+      <option value="">-- Select --</option>
+      <option value="bundle">Brand New Bundle Policy</option>
+      <option value="odonly" disabled>Own Damage Only (Coming Soon)</option>
+      <option value="package" disabled>Package Policy (Coming Soon)</option>
+      <option value="tponly" disabled>Third Party Premium Only (Coming Soon)</option>
+    </select>
+
+    <div id="bundleForm" class="hidden" style="margin-top: 20px;">
+      <label>Ex Showroom Cost of Vehicle *</label>
+      <input type="number" id="exShowroomCost" required>
+
+      <label>Electric Accessories</label>
+      <input type="number" id="electricAccessories">
+
+      <label>Zone *</label>
+      <select id="zone" required>
+        <option value="">Select Zone</option>
+        <option value="A">Zone A - Chennai, Delhi / New Delhi, Kolkata, Mumbai ,PUNE,HYDERABAD,AHMEDABAD,BANGLORE</option>
+        <option value="B">Zone B - Rest of India</option>
+      </select>
+
+      <label>Cubic Capacity *</label>
+      <input type="number" id="cubicCapacity" required>
+
+      <label>Fuel Type *</label>
+      <select id="fuelType" onchange="checkFuelType()">
+        <option value="">Select</option>
+        <option value="diesel">Diesel</option>
+        <option value="petrol">Petrol & Others</option>
+      </select>
+
+      <div id="subFuelOptions" class="hidden">
+        <label>Choose Fuel Add-On</label>
+        <input type="checkbox" id="ev"> EV
+        <input type="checkbox" id="cngLpg"> CNG/LPG + Petrol
+      </div>
+
+      <label>Invoice Value (Optional)</label>
+      <input type="number" id="invoiceValue">
+
+      <label>Seating Capacity</label>
+      <div class="dual-input">
+        <input type="number" id="passengers" placeholder="Passengers">
+        <input type="number" id="driver" value="1" placeholder="Driver">
+      </div>
+    </div>
+
+    <div class="buttons" style="margin-top: 30px;">
+      <button type="button" onclick="goBack()">Back</button>
+      <button type="button" onclick="goNext()">Next</button>
+    </div>
+  </form>
+</div>
+
+<script src="js/vehicle.js"></script>
+</body>
+</html>

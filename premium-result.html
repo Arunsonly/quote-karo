@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Premium Calculation Result</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Motor Insurance Premium Summary</h2>
+
+  <div class="premium-columns">
+    <div class="left-col">
+      <h3>Own Damage Coverage</h3>
+      <table id="odTable"></table>
+    </div>
+    <div class="right-col">
+      <h3>Third Party Coverage</h3>
+      <table id="tpTable"></table>
+    </div>
+  </div>
+
+  <div class="summary-total">
+    <table>
+      <tr><td>Total Own Damage Premium</td><td id="odTotal">₹0.00</td></tr>
+      <tr><td>Total Third Party Premium</td><td id="tpTotal">₹0.00</td></tr>
+      <tr><td>GST (18%)</td><td id="gstAmt">₹0.00</td></tr>
+      <tr class="grand"><td><strong>Total Premium</strong></td><td id="finalTotal"><strong>₹0.00</strong></td></tr>
+    </table>
+  </div>
+
+  <div id="diagnostics" style="margin-top: 40px; background: #fffbe0; padding: 20px; border-radius: 10px; border: 2px dashed #ffa500;">
+    <h3 style="text-align:center; color: #e65100;">📋 Diagnostic Premium Breakdown</h3>
+    <pre id="diagnosticOutput" style="white-space: pre-wrap; font-size: 14px; line-height: 1.6; color: #444;"></pre>
+  </div>
+</div>
+
+<script src="js/result.js"></script>
+</body>
+</html>
